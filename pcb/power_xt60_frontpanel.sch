@@ -212,8 +212,6 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="4.2" y1="-3.7" x2="0" y2="-7.9" width="0.127" layer="46" curve="-90"/>
 <wire x1="0" y1="-7.9" x2="-4.2" y2="-3.7" width="0.127" layer="46" curve="-90"/>
 <wire x1="-4.2" y1="-3.7" x2="-4.2" y2="7.9" width="0.127" layer="46"/>
-<hole x="0" y="10" drill="3"/>
-<hole x="0" y="-10" drill="3"/>
 <wire x1="-4" y1="13.5" x2="-4" y2="10" width="0.127" layer="51"/>
 <wire x1="-4" y1="13.5" x2="4" y2="13.5" width="0.127" layer="51"/>
 <wire x1="4" y1="13.5" x2="4" y2="10" width="0.127" layer="51"/>
@@ -233,6 +231,8 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="4" y1="-10" x2="6" y2="-8" width="0.127" layer="51"/>
 <circle x="0" y="-3.6" radius="1.7" width="0.127" layer="51"/>
 <circle x="0" y="3.6" radius="1.7" width="0.127" layer="51"/>
+<pad name="+" x="0" y="10" drill="3"/>
+<pad name="-" x="0" y="-10" drill="3"/>
 </package>
 <package name="2.8-PAD">
 <description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 2.8 mm, round</description>
@@ -286,6 +286,8 @@ DIN A4, landscape with location and doc. field</description>
 <circle x="0" y="-2.54" radius="1.524" width="0.254" layer="94"/>
 <text x="-2.54" y="5.842" size="1.778" layer="95">&gt;NAME</text>
 <text x="-2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="+" x="-7.62" y="2.54" length="middle"/>
+<pin name="-" x="-7.62" y="-2.54" length="middle"/>
 </symbol>
 <symbol name="MOUNT-PAD">
 <wire x1="0.254" y1="2.032" x2="2.032" y2="0.254" width="1.016" layer="94" curve="-75.749967" cap="flat"/>
@@ -303,6 +305,10 @@ DIN A4, landscape with location and doc. field</description>
 </gates>
 <devices>
 <device name="" package="XT60E1-M-PANEL-HOLE">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -472,6 +478,8 @@ DIN A4, landscape with location and doc. field</description>
 <part name="X10" library="M2M-Connectors" deviceset="SOLDERPAD" device="4X5"/>
 <part name="X11" library="M2M-Connectors" deviceset="SOLDERPAD" device="4X5"/>
 <part name="X12" library="M2M-Connectors" deviceset="SOLDERPAD" device="4X5"/>
+<part name="GND2" library="M2M-Power" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="M2M-Power" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -483,25 +491,25 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="LAST_DATE_TIME" x="162.29" y="10.16" size="2.286" layer="94"/>
 <attribute name="SHEET" x="230.505" y="5.08" size="2.54" layer="94"/>
 </instance>
-<instance part="H1" gate="G$1" x="134.62" y="116.84" smashed="yes">
-<attribute name="NAME" x="132.08" y="122.682" size="1.778" layer="95"/>
-<attribute name="VALUE" x="132.08" y="109.22" size="1.778" layer="96"/>
+<instance part="H1" gate="G$1" x="144.78" y="116.84" smashed="yes">
+<attribute name="NAME" x="142.24" y="122.682" size="1.778" layer="95"/>
+<attribute name="VALUE" x="142.24" y="109.22" size="1.778" layer="96"/>
 </instance>
-<instance part="H2" gate="G$1" x="134.62" y="99.06" smashed="yes">
-<attribute name="NAME" x="132.08" y="104.902" size="1.778" layer="95"/>
-<attribute name="VALUE" x="132.08" y="91.44" size="1.778" layer="96"/>
+<instance part="H2" gate="G$1" x="144.78" y="99.06" smashed="yes">
+<attribute name="NAME" x="142.24" y="104.902" size="1.778" layer="95"/>
+<attribute name="VALUE" x="142.24" y="91.44" size="1.778" layer="96"/>
 </instance>
-<instance part="H3" gate="G$1" x="134.62" y="81.28" smashed="yes">
-<attribute name="NAME" x="132.08" y="87.122" size="1.778" layer="95"/>
-<attribute name="VALUE" x="132.08" y="73.66" size="1.778" layer="96"/>
+<instance part="H3" gate="G$1" x="144.78" y="81.28" smashed="yes">
+<attribute name="NAME" x="142.24" y="87.122" size="1.778" layer="95"/>
+<attribute name="VALUE" x="142.24" y="73.66" size="1.778" layer="96"/>
 </instance>
-<instance part="H4" gate="G$1" x="134.62" y="63.5" smashed="yes">
-<attribute name="NAME" x="132.08" y="69.342" size="1.778" layer="95"/>
-<attribute name="VALUE" x="132.08" y="55.88" size="1.778" layer="96"/>
+<instance part="H4" gate="G$1" x="144.78" y="63.5" smashed="yes">
+<attribute name="NAME" x="142.24" y="69.342" size="1.778" layer="95"/>
+<attribute name="VALUE" x="142.24" y="55.88" size="1.778" layer="96"/>
 </instance>
-<instance part="H5" gate="G$1" x="134.62" y="134.62" smashed="yes">
-<attribute name="NAME" x="132.08" y="140.462" size="1.778" layer="95"/>
-<attribute name="VALUE" x="132.08" y="127" size="1.778" layer="96"/>
+<instance part="H5" gate="G$1" x="144.78" y="134.62" smashed="yes">
+<attribute name="NAME" x="142.24" y="140.462" size="1.778" layer="95"/>
+<attribute name="VALUE" x="142.24" y="127" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="63.5" y="142.24" smashed="yes">
 <attribute name="VALUE" x="63.5" y="145.034" size="1.778" layer="96" align="bottom-center"/>
@@ -561,6 +569,12 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="VALUE" x="101.6" y="68.58" size="1.778" layer="96"/>
 <attribute name="NAME" x="101.6" y="76.962" size="1.778" layer="95"/>
 </instance>
+<instance part="GND2" gate="1" x="134.62" y="48.26" smashed="yes">
+<attribute name="VALUE" x="134.62" y="48.006" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY2" gate="G$1" x="132.08" y="139.7" smashed="yes">
+<attribute name="VALUE" x="132.08" y="142.494" size="1.778" layer="96" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -600,6 +614,28 @@ DIN A4, landscape with location and doc. field</description>
 <wire x1="68.58" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
 <junction x="63.5" y="63.5"/>
 </segment>
+<segment>
+<pinref part="H5" gate="G$1" pin="+"/>
+<wire x1="137.16" y1="137.16" x2="132.08" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="137.16" x2="132.08" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="H4" gate="G$1" pin="+"/>
+<wire x1="132.08" y1="119.38" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="101.6" x2="132.08" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="83.82" x2="132.08" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="66.04" x2="137.16" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="H3" gate="G$1" pin="+"/>
+<wire x1="137.16" y1="83.82" x2="132.08" y2="83.82" width="0.1524" layer="91"/>
+<junction x="132.08" y="83.82"/>
+<pinref part="H2" gate="G$1" pin="+"/>
+<wire x1="137.16" y1="101.6" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
+<junction x="132.08" y="101.6"/>
+<pinref part="H1" gate="G$1" pin="+"/>
+<wire x1="137.16" y1="119.38" x2="132.08" y2="119.38" width="0.1524" layer="91"/>
+<junction x="132.08" y="119.38"/>
+<pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
+<wire x1="132.08" y1="139.7" x2="132.08" y2="137.16" width="0.1524" layer="91"/>
+<junction x="132.08" y="137.16"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -635,6 +671,28 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="H8" gate="1" pin="MOUNT"/>
 <wire x1="101.6" y1="63.5" x2="96.52" y2="63.5" width="0.1524" layer="91"/>
 <junction x="96.52" y="63.5"/>
+</segment>
+<segment>
+<pinref part="H5" gate="G$1" pin="-"/>
+<wire x1="137.16" y1="132.08" x2="134.62" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="H4" gate="G$1" pin="-"/>
+<wire x1="134.62" y1="132.08" x2="134.62" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="114.3" x2="134.62" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="96.52" x2="134.62" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="78.74" x2="134.62" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="H3" gate="G$1" pin="-"/>
+<wire x1="137.16" y1="78.74" x2="134.62" y2="78.74" width="0.1524" layer="91"/>
+<junction x="134.62" y="78.74"/>
+<pinref part="H2" gate="G$1" pin="-"/>
+<wire x1="137.16" y1="96.52" x2="134.62" y2="96.52" width="0.1524" layer="91"/>
+<junction x="134.62" y="96.52"/>
+<pinref part="H1" gate="G$1" pin="-"/>
+<wire x1="137.16" y1="114.3" x2="134.62" y2="114.3" width="0.1524" layer="91"/>
+<junction x="134.62" y="114.3"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="134.62" y1="60.96" x2="134.62" y2="50.8" width="0.1524" layer="91"/>
+<junction x="134.62" y="60.96"/>
 </segment>
 </net>
 </nets>
